@@ -34,7 +34,7 @@ public class VictoryDiamond : MonoBehaviour
     [System.Obsolete]
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && GameObject.FindGameObjectsWithTag("Diamond").Length == 0)
         {
             GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine(Victory());
