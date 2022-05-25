@@ -133,6 +133,9 @@ public class PlayerMovementTutorial : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall")
         {
+            // move player forward
+            rb.AddForce(transform.forward * moveSpeed * 10f, ForceMode.Force);
+            
             doubleJump = 0;
         }
     }
